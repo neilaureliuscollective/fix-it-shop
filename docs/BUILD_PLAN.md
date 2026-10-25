@@ -1,6 +1,8 @@
 # The Fix-It Shop — Digital Flagship Build Plan
 
-Status: **Draft for approval** · Owner: Neil Stutes · Client: Katie, The Fix-It Shop
+Status: **v1 built** (see README) · Owner: Neil Stutes · Client: Katie, The Fix-It Shop
+
+> **Direction updates from Neil (supersede below):** the provided logo and palette are direction, not locked — v1 ships a new arch-and-star emblem and refined palette. Katie does not post photos of her work, so there is no gallery; the site carries itself on type, texture and copy. No Instagram, domain or license details needed for v1. Katie is a **United States Marine veteran** who built the shop from the ground up — this leads the story.
 
 ---
 
