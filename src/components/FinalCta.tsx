@@ -1,21 +1,28 @@
+import { ArcEmblem } from "./ArcEmblem";
 import { BookButton } from "./BookButton";
-import { Emblem } from "./Emblem";
+import { Glass } from "./Glass";
 import { Reveal } from "./Reveal";
 
 export function FinalCta() {
   return (
-    <section className="surface-steel grain relative overflow-hidden border-t border-gold/20 py-28 text-center sm:py-36">
-      <Emblem className="pointer-events-none absolute left-1/2 top-1/2 h-[560px] w-[560px] -translate-x-1/2 -translate-y-1/2 text-gold opacity-[0.05]" />
-      <Reveal className="relative mx-auto max-w-3xl px-5">
-        <span className="eyebrow text-gold">Your Chair Is Ready</span>
-        <h2 className="mt-6 font-display text-5xl leading-[1] font-medium text-stone sm:text-7xl">
-          Walk in a client.
-          <br />
-          <span className="text-gold-foil italic">Walk out a regular.</span>
-        </h2>
-        <div className="mt-12 flex justify-center">
-          <BookButton placement="final_cta" />
-        </div>
+    <section className="relative px-5 py-24 sm:px-8 sm:py-32">
+      <Reveal className="mx-auto max-w-5xl">
+        <Glass tilt={false} className="glass-gold overflow-hidden rounded-[2.5rem] px-6 py-20 text-center sm:px-12 sm:py-28">
+          <div className="pointer-events-none absolute top-1/2 left-1/2 w-[620px] -translate-x-1/2 -translate-y-1/2 opacity-[0.14]">
+            <ArcEmblem />
+          </div>
+          <div className="relative">
+            <span className="eyebrow text-gold-bright">Your Chair Is Ready</span>
+            <h2 className="mt-6 font-display text-5xl leading-[1] font-medium sm:text-7xl">
+              <span className="text-chrome">Walk in a client.</span>
+              <br />
+              <span className="text-gold-foil text-glow-gold italic">Walk out a regular.</span>
+            </h2>
+            <div className="mt-12 flex justify-center">
+              <BookButton placement="final_cta" />
+            </div>
+          </div>
+        </Glass>
       </Reveal>
     </section>
   );

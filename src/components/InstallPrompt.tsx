@@ -65,7 +65,7 @@ export function InstallPrompt() {
     <div
       role="dialog"
       aria-label="Add The Fix-It Shop to your home screen"
-      className="fixed inset-x-4 top-[calc(env(safe-area-inset-top)+5rem)] z-50 mx-auto max-w-sm border border-gold/30 bg-ink/95 p-5 shadow-2xl backdrop-blur-xl"
+      className="glass glass-strong fixed inset-x-4 top-[calc(env(safe-area-inset-top)+5.5rem)] z-50 mx-auto max-w-sm rounded-3xl p-6"
     >
       <p className="font-display text-xl text-stone">Keep the shop on your phone.</p>
       <p className="mt-2 text-sm leading-relaxed text-mist">
@@ -82,14 +82,14 @@ export function InstallPrompt() {
         {!ios && deferred && (
           <button
             onClick={install}
-            className="bg-gold px-4 py-2.5 text-[0.65rem] font-bold tracking-[0.25em] text-carbon uppercase hover:bg-gold-bright"
+            className="btn-gold rounded-full px-5 py-2.5 text-[0.65rem] font-bold tracking-[0.25em] uppercase"
           >
             Install
           </button>
         )}
         <button
           onClick={dismiss}
-          className="px-4 py-2.5 text-[0.65rem] font-bold tracking-[0.25em] text-mist uppercase hover:text-stone"
+          className="rounded-full px-4 py-2.5 text-[0.65rem] font-bold tracking-[0.25em] text-mist uppercase hover:text-stone"
         >
           {ios ? "Got it" : "Not now"}
         </button>

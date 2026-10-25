@@ -1,3 +1,4 @@
+import { Aurora } from "@/components/Aurora";
 import { FinalCta } from "@/components/FinalCta";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
@@ -20,6 +21,7 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema(siteUrl())).replace(/</g, "\\u003c") }}
       />
+      <Aurora />
       <Header />
       <main>
         <Hero />

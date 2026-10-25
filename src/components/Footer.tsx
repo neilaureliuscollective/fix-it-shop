@@ -4,7 +4,7 @@ import { Wordmark } from "./Wordmark";
 export function Footer() {
   const a = site.address;
   return (
-    <footer className="border-t border-white/[0.06] bg-carbon pt-16 pb-32 sm:pb-16">
+    <footer className="relative border-t border-white/[0.08] bg-carbon/60 pt-16 pb-32 backdrop-blur-xl sm:pb-16">
       <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 md:grid-cols-[1.4fr_1fr_1fr]">
         <div>
           <Wordmark />

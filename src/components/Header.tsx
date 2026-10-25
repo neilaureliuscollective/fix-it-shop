@@ -11,6 +11,7 @@ const links = [
   { href: "#visit", label: "Visit" },
 ];
 
+// Floating glass capsule, detached from the edges, with a scroll-progress filament.
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
 
@@ -22,16 +23,16 @@ export function Header() {
   }, []);
 
   return (
-    <header
-      className={`fixed inset-x-0 top-0 z-40 pt-[env(safe-area-inset-top)] transition-all duration-500 ${
-        scrolled ? "border-b border-white/[0.06] bg-carbon/80 backdrop-blur-xl" : "bg-transparent"
-      }`}
-    >
-      <div className="mx-auto flex h-18 max-w-7xl items-center justify-between px-5 sm:px-8">
+    <header className="fixed inset-x-0 top-0 z-40 px-3 pt-[calc(env(safe-area-inset-top)+0.75rem)] sm:px-6">
+      <div
+        className={`glass mx-auto flex h-16 max-w-6xl items-center justify-between overflow-hidden rounded-full pr-2 pl-5 transition-all duration-500 sm:pl-6 ${
+          scrolled ? "glass-strong" : ""
+        }`}
+      >
         <a href="#top" aria-label="The Fix-It Shop — back to top">
           <Wordmark />
         </a>
-        <nav aria-label="Primary" className="hidden items-center gap-9 lg:flex">
+        <nav aria-label="Primary" className="hidden items-center gap-8 lg:flex">
           {links.map((l) => (
             <a key={l.href} href={l.href} className="eyebrow text-mist transition-colors hover:text-stone">
               {l.label}
@@ -39,10 +40,14 @@ export function Header() {
           ))}
         </nav>
         <div className="hidden sm:block">
-          <BookButton placement="header" variant="outline" className="!px-5 !py-3">
+          <BookButton placement="header" className="!px-6 !py-3">
             Book Now
           </BookButton>
         </div>
+        <span
+          aria-hidden
+          className="scroll-progress absolute inset-x-6 bottom-0 h-px bg-gradient-to-r from-transparent via-gold to-transparent"
+        />
       </div>
     </header>
   );

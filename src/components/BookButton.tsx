@@ -7,9 +7,8 @@ import { bookingHref } from "@/lib/booking";
 type Variant = "solid" | "outline" | "ghost";
 
 const styles: Record<Variant, string> = {
-  solid:
-    "relative overflow-hidden bg-gold text-carbon hover:bg-gold-bright shadow-[0_10px_40px_-12px_rgb(207_165_87/0.55)]",
-  outline: "border border-gold/70 text-stone hover:border-gold hover:bg-gold/10",
+  solid: "btn-gold rounded-full",
+  outline: "btn-glass rounded-full",
   ghost: "text-gold hover:text-gold-bright",
 };
 
@@ -32,12 +31,12 @@ export function BookButton({
       target="_blank"
       rel="noopener"
       onClick={() => track("book_click", { placement, service: service ?? "any" })}
-      className={`group inline-flex items-center justify-center gap-3 px-7 py-4 text-[0.72rem] font-bold tracking-[0.28em] uppercase transition-colors duration-300 ${styles[variant]} ${className}`}
+      className={`group inline-flex items-center justify-center gap-3 px-8 py-4 text-[0.72rem] font-bold tracking-[0.28em] uppercase ${styles[variant]} ${className}`}
     >
       {variant === "solid" && (
         <span
           aria-hidden
-          className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-white/35 opacity-0 group-hover:opacity-100 group-hover:animate-[sheen_0.9s_ease-out]"
+          className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-transparent via-white/60 to-transparent opacity-0 group-hover:opacity-100 group-hover:animate-[sheen_1s_ease-out]"
         />
       )}
       <span className="relative">{children}</span>

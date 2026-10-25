@@ -1,58 +1,66 @@
 import { services, type Service } from "@/content/site";
 import { BookButton } from "./BookButton";
+import { Glass } from "./Glass";
 import { Reveal } from "./Reveal";
 import { SectionHeading } from "./SectionHeading";
 
 function Meta({ s }: { s: Service }) {
   return (
-    <div className="text-right">
-      {s.price !== null && <div className="font-display text-3xl text-gold sm:text-4xl">${s.price}</div>}
-      <div className="eyebrow mt-1 !text-[0.6rem] text-mist">{s.minutes !== null ? `${s.minutes} min` : "Pricing on booking"}</div>
+    <div className={`shrink-0 ${s.price !== null ? "text-right" : "sm:text-right"}`}>
+      {s.price !== null && (
+        <div className="text-gold-foil font-display text-4xl leading-none sm:text-5xl">${s.price}</div>
+      )}
+      <div className="eyebrow mt-2 !text-[0.6rem] text-mist">
+        {s.minutes !== null ? `${s.minutes} min` : "Pricing on booking"}
+      </div>
     </div>
   );
 }
 
 function ServiceCard({ s, index }: { s: Service; index: number }) {
   return (
-    <Reveal
-      as="article"
-      delay={index * 90}
-      className={`group relative flex flex-col border p-7 transition-colors duration-500 sm:p-9 ${
-        s.signature
-          ? "surface-steel border-gold/50 lg:col-span-3"
-          : "border-white/[0.08] bg-ink hover:border-gold/40"
-      }`}
-    >
-      {s.signature && (
-        <span className="eyebrow absolute -top-3 left-7 bg-gold px-3 py-1 !text-[0.6rem] text-carbon sm:left-9">
-          Signature Experience
-        </span>
-      )}
-      <div className="flex items-start justify-between gap-6">
-        <div>
-          <h3 className="font-display text-3xl font-medium text-stone sm:text-4xl">{s.name}</h3>
-          <p className="eyebrow mt-3 text-gold">{s.line}</p>
+    <Reveal delay={index * 90} className={s.signature ? "lg:col-span-3" : ""}>
+      <Glass
+        as="article"
+        tilt={!s.signature}
+        className={`flex h-full flex-col rounded-[2rem] p-7 sm:p-10 ${s.signature ? "glass-gold lg:p-12" : ""}`}
+      >
+        {s.signature && (
+          <span className="btn-gold eyebrow mb-6 inline-flex self-start rounded-full px-3.5 py-1.5 !text-[0.58rem]">
+            Signature Experience
+          </span>
+        )}
+        <div className={`flex items-start justify-between gap-6 ${s.price === null ? "flex-col sm:flex-row" : ""}`}>
+          <div>
+            <h3 className={`text-chrome font-display font-medium ${s.signature ? "text-4xl sm:text-6xl" : "text-3xl sm:text-4xl"}`}>
+              {s.name}
+            </h3>
+            <p className="eyebrow mt-3 text-gold">{s.line}</p>
+          </div>
+          <Meta s={s} />
         </div>
-        <Meta s={s} />
-      </div>
-      <p className="mt-6 max-w-xl leading-relaxed text-mist">{s.description}</p>
-      <ul className="mt-6 flex flex-wrap gap-2">
-        {s.includes.map((i) => (
-          <li key={i} className="border border-white/10 px-3 py-1.5 text-xs tracking-wide text-stone/80">
-            {i}
-          </li>
-        ))}
-      </ul>
-      <div className="mt-auto pt-8">
-        <BookButton
-          service={s.id}
-          placement="menu"
-          variant={s.signature ? "solid" : "outline"}
-          className="w-full sm:w-auto"
-        >
-          Book {s.name}
-        </BookButton>
-      </div>
+        <p className={`mt-6 leading-relaxed text-mist ${s.signature ? "max-w-2xl text-lg" : "max-w-xl"}`}>{s.description}</p>
+        <ul className="mt-6 flex flex-wrap gap-2">
+          {s.includes.map((i) => (
+            <li
+              key={i}
+              className="rounded-full bg-white/[0.05] px-3.5 py-1.5 text-xs tracking-wide text-stone/85 shadow-[inset_0_1px_0_rgb(255_255_255/0.12),inset_0_0_0_1px_rgb(255_255_255/0.08)]"
+            >
+              {i}
+            </li>
+          ))}
+        </ul>
+        <div className="mt-auto pt-9">
+          <BookButton
+            service={s.id}
+            placement="menu"
+            variant={s.signature ? "solid" : "outline"}
+            className="w-full sm:w-auto"
+          >
+            Book {s.name}
+          </BookButton>
+        </div>
+      </Glass>
     </Reveal>
   );
 }
@@ -72,7 +80,7 @@ export function ServiceMenu() {
           }
           intro="Every appointment gets the same thing: her full attention and a finish she'd put her name on."
         />
-        <div className="mt-16 grid gap-6 lg:grid-cols-3">
+        <div className="mt-16 grid gap-5 lg:grid-cols-3">
           {services.map((s, i) => (
             <ServiceCard key={s.id} s={s} index={i} />
           ))}
