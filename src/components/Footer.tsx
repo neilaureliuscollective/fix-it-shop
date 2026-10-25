@@ -8,8 +8,8 @@ export function Footer() {
       <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 md:grid-cols-[1.4fr_1fr_1fr]">
         <div>
           <Wordmark />
-          <p className="mt-6 max-w-sm leading-relaxed text-mist">Precision care for a more confident you.</p>
-          <p className="eyebrow mt-6 !text-[0.6rem] text-gold">Veteran-Owned · Locally Built</p>
+          <p className="mt-6 max-w-sm leading-relaxed text-mist">A good chair, a clean cut, and someone in your corner.</p>
+          <p className="eyebrow mt-6 !text-[0.6rem] text-gold">Veteran-Owned · Built in Eunice</p>
         </div>
         <div>
           <p className="eyebrow text-stone">Visit</p>

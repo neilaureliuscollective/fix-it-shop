@@ -13,25 +13,29 @@ export function Story() {
             eyebrow="Meet Katie"
             title={
               <>
-                Once a Marine.
+                A Marine who never
                 <br />
-                <span className="text-gold-foil">Always the standard.</span>
+                <span className="text-gold-foil italic">stopped showing up.</span>
               </>
             }
           />
           <Reveal className="mt-8 space-y-5 text-lg leading-relaxed text-mist">
             <p>
-              Katie served in the United States Marine Corps, and she runs her chair the way she was trained to run
-              everything: on time, squared away, and never finished until it&apos;s right.
+              Katie served in the United States Marine Corps. What stayed with her wasn&apos;t the toughness.
+              It was learning to look out for the person next to you.
             </p>
             <p>
-              She built The Fix-It Shop from the ground up, right here in Eunice. No investors, no franchise. One
-              client, one fade, one handshake at a time.
+              She brought that home and built The Fix-It Shop from the ground up, right here in Eunice, one chair and
+              one client at a time. She chose to work with men because she&apos;s seen what a good cut and an honest
+              conversation can do for someone who&apos;s been carrying too much.
             </p>
             <p>
-              She&apos;s a cosmetologist who chose to do one thing and do it better than anyone around: men&apos;s
-              hair. The cuts are sharp. The conversation is real. And if something else in your life needs fixing,
-              she&apos;ll probably have an opinion on that too.
+              She&apos;ll make sure you look sharp. Beyond that, she wants to see you win: at work, at home, and in
+              the legacy you&apos;re building for the people who count on you. In the chair or out of it, if she can
+              help, she will.
+            </p>
+            <p className="text-stone">
+              The name says Fix-It. It was never about fixing you. It&apos;s about helping you get back to you.
             </p>
           </Reveal>
         </div>
@@ -42,9 +46,9 @@ export function Story() {
             <div className="flex h-full flex-col items-center justify-center text-center">
               <ArcEmblem className="w-40" />
               <p className="text-chrome mt-8 font-display text-3xl leading-tight italic sm:text-4xl">
-                Sharp isn&apos;t a style.
+                You&apos;re not broken.
                 <br />
-                It&apos;s a standard.
+                You&apos;re just due.
               </p>
               <figcaption className="eyebrow mt-8 text-gold">The Fix-It Shop · Est. Eunice</figcaption>
             </div>

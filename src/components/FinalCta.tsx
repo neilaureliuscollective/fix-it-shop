@@ -12,11 +12,11 @@ export function FinalCta() {
             <ArcEmblem />
           </div>
           <div className="relative">
-            <span className="eyebrow text-gold-bright">Your Chair Is Ready</span>
+            <span className="eyebrow text-gold-bright">Whenever You&apos;re Ready</span>
             <h2 className="mt-6 font-display text-5xl leading-[1] font-medium sm:text-7xl">
-              <span className="text-chrome">Walk in a client.</span>
+              <span className="text-chrome">Come sit down a while.</span>
               <br />
-              <span className="text-gold-foil text-glow-gold italic">Walk out a regular.</span>
+              <span className="text-gold-foil text-glow-gold italic">You&apos;ve earned it.</span>
             </h2>
             <div className="mt-12 flex justify-center">
               <BookButton placement="final_cta" />

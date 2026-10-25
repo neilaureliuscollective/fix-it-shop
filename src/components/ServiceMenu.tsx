@@ -73,12 +73,12 @@ export function ServiceMenu() {
           eyebrow="The Menu"
           title={
             <>
-              Four services.
+              Four ways
               <br />
-              <span className="text-mist italic">No shortcuts.</span>
+              <span className="text-mist italic">to take a seat.</span>
             </>
           }
-          intro="Every appointment gets the same thing: her full attention and a finish she'd put her name on."
+          intro="Whichever you choose, you get the same thing: her full attention and the time you need."
         />
         <div className="mt-16 grid gap-5 lg:grid-cols-3">
           {services.map((s, i) => (

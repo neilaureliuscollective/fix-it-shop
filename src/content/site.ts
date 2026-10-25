@@ -7,9 +7,9 @@ export const site = {
   name: "The Fix-It Shop",
   shortName: "Fix-It Shop",
   stylist: "Katie",
-  tagline: "Precision grooming for men.",
+  tagline: "More than a haircut.",
   description:
-    "Veteran-owned men's grooming in Eunice, Louisiana. Precision fades, sculpted beards and hot-towel finishes by Katie — a United States Marine who built The Fix-It Shop from the ground up.",
+    "Veteran-owned men's grooming in Eunice, Louisiana. Clean fades, shaped beards and hot towels from Katie, a Marine veteran who believes your hour in the chair should leave you feeling as good as you look.",
   phone: { display: "(337) 945-9138", href: "tel:+13379459138" },
   address: {
     street: "230 W Walnut Ave",
@@ -39,7 +39,7 @@ export const services: Service[] = [
     name: "Fix-It: Edge+",
     line: "The full reset.",
     description:
-      "Everything she does, in one sitting. Precision cut, beard sculpt, edge-up, scalp massage and hot towels. You walk out squared away.",
+      "Everything, start to finish. Precision cut, beard sculpt, edge-up, scalp massage and hot towels. The one you book when you need the whole visit to be about you.",
     price: null, // TODO: confirm price with Katie
     minutes: null, // TODO: confirm duration with Katie
     includes: ["Precision haircut", "Beard sculpting", "Edge-up", "Scalp massage", "Hot towels"],
@@ -48,9 +48,9 @@ export const services: Service[] = [
   {
     id: "fix-it",
     name: "The Fix-It",
-    line: "The signature fade.",
+    line: "Your everyday fade.",
     description:
-      "A precision-blended fade, cut to how you actually wear your hair. Finished with an optional hot-towel shampoo.",
+      "A clean, carefully blended fade, cut for how you actually wear your hair. Add a hot-towel shampoo if you want a few extra minutes to unwind.",
     price: 30,
     minutes: 30,
     includes: ["Precision fade", "Line-up", "Optional hot-towel shampoo"],
@@ -58,9 +58,9 @@ export const services: Service[] = [
   {
     id: "fix-it-edge",
     name: "Fix-It: Edge",
-    line: "Fade and full beard sculpt.",
+    line: "Fade plus a shaped beard.",
     description:
-      "The signature fade paired with a fully sculpted beard. Shape, length and lines, all drawn on purpose.",
+      "Your fade plus a fully shaped beard. Tidy, defined, and easy to keep up between visits.",
     price: 45,
     minutes: 60,
     includes: ["Precision fade", "Beard sculpting", "Defined lines"],
@@ -68,9 +68,9 @@ export const services: Service[] = [
   {
     id: "fix-it-jr",
     name: "Fix-It: Jr.",
-    line: "For young gentlemen, 10 & under.",
+    line: "For the young men, 10 & under.",
     description:
-      "A clean, quick cut that builds confidence early. Calm chair, sharp result. No wash or towel service.",
+      "A patient chair and a cut they're proud to show off. Good habits start early. No wash or towel service.",
     price: 25,
     minutes: 25,
     includes: ["Kids' cut", "Ages 10 & under"],
@@ -93,26 +93,42 @@ export const hours: Hours[] = [
 export const pillars = [
   {
     n: "01",
-    title: "Discipline",
-    body: "On time, squared away, never rushed. The way a Marine runs anything.",
+    title: "A chair that's yours",
+    body: "No rush and no pressure. Talk about your week, your family, your plans, or just close your eyes. Both are welcome.",
   },
   {
     n: "02",
-    title: "Precision",
-    body: "Every line measured, every blend finished. Men's hair is all she does.",
+    title: "Work done with care",
+    body: "Clean fades, sharp lines, a beard with real shape. Done carefully, because you trusted her with it.",
   },
   {
     n: "03",
-    title: "Hospitality",
-    body: "Real conversation in a chair that feels like yours. Sit down a client, leave a regular.",
+    title: "Someone in your corner",
+    body: "Katie is in this to help men move forward, in the chair and out of it. If she can help, she will.",
   },
 ];
 
 export const ritual = [
-  { n: "01", title: "Consult", body: "How you wear it, how you work, what you want to see in the mirror." },
-  { n: "02", title: "Cut", body: "Clean sections, tight blends, a shape built for your head." },
-  { n: "03", title: "Detail", body: "Edges, lines and beard sharpened until it's right. Not close. Right." },
-  { n: "04", title: "Finish", body: "Hot towel, styled, one last check. You leave ready." },
+  {
+    n: "01",
+    title: "You walk in.",
+    body: "Maybe it's been a long week. Maybe a long year. Either way, you're welcome here, just as you are.",
+  },
+  {
+    n: "02",
+    title: "You sit down.",
+    body: "The cape goes on. The phone goes down. Talk if you want to. Sit quiet if you need to.",
+  },
+  {
+    n: "03",
+    title: "You breathe out.",
+    body: "Clippers, shears, a warm towel. While the work comes together, you finally get a minute for yourself.",
+  },
+  {
+    n: "04",
+    title: "You see yourself.",
+    body: "That first look in the mirror. Shoulders back. Same man, carrying it a little lighter.",
+  },
 ];
 
 export const policies = [
@@ -122,10 +138,10 @@ export const policies = [
   },
   {
     title: "Cancellations",
-    body: "Plans change. Give as much notice as you can so the chair can go to someone else. Late cancellations are subject to a 50% fee.",
+    body: "Life happens. Just give as much notice as you can so someone else can have the chair. Late cancellations are subject to a 50% fee.",
   },
   {
-    title: "Young gentlemen",
-    body: "Fix-It: Jr. is for clients 10 and under. Older gents book The Fix-It.",
+    title: "The young men",
+    body: "Fix-It: Jr. is for clients 10 and under. Older guys book The Fix-It.",
   },
 ];

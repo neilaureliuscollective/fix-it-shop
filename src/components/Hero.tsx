@@ -25,18 +25,19 @@ export function Hero() {
 
           <span className="glass inline-flex items-center gap-3 rounded-full px-4 py-2">
             <span className="h-1.5 w-1.5 rounded-full bg-gold shadow-[0_0_10px_2px_rgb(220_176_98/0.8)]" />
-            <span className="eyebrow !text-[0.62rem] text-gold-bright">Veteran-Owned · Eunice, Louisiana</span>
+            <span className="eyebrow !text-[0.62rem] text-gold-bright">Men&apos;s Grooming · Eunice, Louisiana</span>
           </span>
 
           <h1 className="mt-8 max-w-4xl font-display text-[3.4rem] leading-[0.95] font-medium tracking-[-0.02em] sm:text-[5.5rem] lg:text-[7rem]">
-            <span className="text-chrome">Held to a </span>
-            <em className="text-gold-foil text-glow-gold font-medium not-italic sm:italic">higher</em>
-            <span className="text-chrome"> standard.</span>
+            <span className="text-chrome">Come as you are.</span>
+            <br />
+            <span className="text-chrome">Leave </span>
+            <em className="text-gold-foil text-glow-gold font-medium italic">standing taller.</em>
           </h1>
 
           <p className="mt-7 max-w-xl text-lg leading-relaxed text-mist sm:text-xl">
-            Precision fades, sculpted beards and hot-towel finishes by {site.stylist}, a United States Marine who
-            built this shop from the ground up.
+            A men&apos;s chair in Eunice where the haircut is only part of it. Sit down, breathe out, and let{" "}
+            {site.stylist} take care of the rest.
           </p>
 
           <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
@@ -45,15 +46,15 @@ export function Hero() {
               href="#menu"
               className="btn-glass inline-flex items-center justify-center gap-3 rounded-full px-8 py-4 text-[0.72rem] font-bold tracking-[0.28em] uppercase"
             >
-              View the Menu
+              See the Menu
             </a>
           </div>
 
           <dl className="mt-14 grid max-w-2xl grid-cols-3 gap-3 sm:gap-4">
             {[
-              ["USMC", "Veteran"],
-              ["Men's", "Hair only"],
-              ["Local", "Built from scratch"],
+              ["USMC", "Veteran-owned"],
+              ["Men's", "Grooming only"],
+              ["Eunice", "Built from scratch"],
             ].map(([k, v]) => (
               <Glass key={k} className="rounded-2xl px-4 py-4 sm:px-5 sm:py-5">
                 <dt className="font-display text-2xl text-gold-bright sm:text-3xl">{k}</dt>

@@ -33,7 +33,7 @@ export default function OpengraphImage() {
           <div style={{ fontSize: 22, letterSpacing: 7, color: "#cfa557", textTransform: "uppercase" }}>
             Veteran-Owned · Eunice, Louisiana
           </div>
-          <div style={{ fontSize: 96, lineHeight: 1, marginTop: 24, fontFamily: "serif" }}>Held to a higher standard.</div>
+          <div style={{ fontSize: 88, lineHeight: 1.05, marginTop: 24, fontFamily: "serif" }}>Come as you are. Leave standing taller.</div>
         </div>
         <div style={{ display: "flex", height: 2, background: "linear-gradient(90deg, #cfa557, transparent)" }} />
       </div>

@@ -8,15 +8,15 @@ export function Ritual() {
     <section id="ritual" className="relative py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeading
-          eyebrow="The Ritual"
+          eyebrow="Your Visit"
           title={
             <>
-              What happens
+              Your time
               <br />
               <span className="text-mist italic">in the chair.</span>
             </>
           }
-          intro="Same order, every visit. That's how the result stays consistent."
+          intro="Here's what it feels like, start to finish."
         />
         <ol className="relative mt-16 grid gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5">
           {/* Connecting filament (desktop) */}

@@ -5,9 +5,9 @@ import { BookButton } from "./BookButton";
 import { Wordmark } from "./Wordmark";
 
 const links = [
+  { href: "#more", label: "More Than a Cut" },
+  { href: "#katie", label: "Meet Katie" },
   { href: "#menu", label: "Menu" },
-  { href: "#katie", label: "Katie" },
-  { href: "#ritual", label: "The Ritual" },
   { href: "#visit", label: "Visit" },
 ];
 

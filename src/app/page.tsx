@@ -26,9 +26,9 @@ export default function Home() {
       <main>
         <Hero />
         <Pillars />
-        <ServiceMenu />
-        <Story />
         <Ritual />
+        <Story />
+        <ServiceMenu />
         <Visit />
         <Policies />
         <FinalCta />
