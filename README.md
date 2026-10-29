@@ -20,7 +20,11 @@ Import the repo in Vercel; no configuration needed. When the domain is purchased
 Enable **Analytics** in the Vercel project to see `book_click` events (tagged by placement and service).
 
 ## Icons
-`public/icons/icon.svg` is the source. Regenerate PNGs with `npm run icons` (uses the preinstalled Playwright).
+`public/icons/emblem.png` is the transparent source, edited from the founder-supplied emblem to remove the outer ring. Regenerate install icons and the SVG favicon wrapper with `npm run icons` (Sharp). Maskable artwork fits inside the circular safe zone.
+
+The existing Cormorant Garamond and Manrope typefaces are self-hosted in `src/app/fonts` (Fontsource variable packages, version 5.3.0; OFL licenses included) so builds do not require Google Fonts access.
+
+The story card uses an AI-generated illustrative cosmetology scene, not a photo of Katie, her premises, or a customer. See `docs/ROUND_1.md` for provenance and review scope.
 
 ## Structure
 - `src/app` — layout, page, manifest, robots, sitemap, Open Graph image

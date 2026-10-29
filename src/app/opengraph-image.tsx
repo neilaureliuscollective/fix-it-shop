@@ -1,10 +1,13 @@
 import { ImageResponse } from "next/og";
+import { readFile } from "node:fs/promises";
+import path from "node:path";
 
 export const alt = "The Fix-It Shop — Veteran-owned men's grooming in Eunice, Louisiana";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
-export default function OpengraphImage() {
+export default async function OpengraphImage() {
+  const emblem = await readFile(path.join(process.cwd(), "public/icons/emblem.png"));
   return new ImageResponse(
     (
       <div
@@ -21,12 +24,8 @@ export default function OpengraphImage() {
         }}
       >
         <div style={{ display: "flex", alignItems: "center", gap: 20 }}>
-          <svg width="64" height="64" viewBox="0 0 64 64" fill="none" stroke="#cfa557">
-            <path d="M14 55V28a18 18 0 0 1 36 0v27" strokeWidth="2" />
-            <path d="M19.5 55V28.5a12.5 12.5 0 0 1 25 0V55" strokeWidth="0.9" />
-            <path d="M32 24.5l2.1 8.4 8.4 2.1-8.4 2.1L32 45.5l-2.1-8.4-8.4-2.1 8.4-2.1z" fill="#cfa557" stroke="none" />
-            <path d="M7 55.5h50" strokeWidth="2" />
-          </svg>
+          {/* ImageResponse embeds the shared asset directly into the social image. */}
+          <img width={64} height={64} alt="" src={`data:image/png;base64,${emblem.toString("base64")}`} />
           <div style={{ fontSize: 30, letterSpacing: 8, fontWeight: 600 }}>FIX-IT SHOP</div>
         </div>
         <div style={{ display: "flex", flexDirection: "column" }}>

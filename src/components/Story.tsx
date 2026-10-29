@@ -1,4 +1,4 @@
-import { ArcEmblem } from "./ArcEmblem";
+import Image from "next/image";
 import { Glass } from "./Glass";
 import { Reveal } from "./Reveal";
 import { SectionHeading } from "./SectionHeading";
@@ -41,17 +41,21 @@ export function Story() {
         </div>
 
         <Reveal delay={150}>
-          <Glass as="figure" className="glass-gold mx-auto aspect-[4/5] max-w-md rounded-[50%_50%_2rem_2rem/40%_40%_2rem_2rem] p-10">
-            <div className="pointer-events-none absolute inset-3 rounded-[inherit] shadow-[inset_0_0_0_1px_rgb(220_176_98/0.18)]" />
-            <div className="flex h-full flex-col items-center justify-center text-center">
-              <ArcEmblem className="w-40" />
-              <p className="text-chrome mt-8 font-display text-3xl leading-tight italic sm:text-4xl">
-                You&apos;re not broken.
-                <br />
-                You&apos;re just due.
+          <Glass as="figure" className="glass-gold mx-auto aspect-[4/5] max-w-md overflow-hidden rounded-[50%_50%_2rem_2rem/40%_40%_2rem_2rem]">
+            <Image
+              src="/scenes/craftsmanship.webp"
+              alt="Illustrative service scene: a cosmetologist uses electric clippers and a comb to carefully taper a client's hair."
+              fill
+              sizes="(min-width: 1024px) 448px, (min-width: 640px) 448px, 100vw"
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-carbon via-transparent to-transparent" />
+            <figcaption className="absolute inset-x-0 bottom-0 p-8 text-center">
+              <p className="text-chrome font-display text-3xl leading-tight italic sm:text-4xl">
+                You&apos;re not broken.<br />You&apos;re just due.
               </p>
-              <figcaption className="eyebrow mt-8 text-gold">The Fix-It Shop · Est. Eunice</figcaption>
-            </div>
+              <p className="mt-4 text-xs text-mist">Illustrative service scene</p>
+            </figcaption>
           </Glass>
         </Reveal>
       </div>
