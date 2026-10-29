@@ -1,27 +1,26 @@
-// Renders the PWA / Apple icons from the emblem. Run: npm run icons
-import { readFileSync } from "node:fs";
-import { createRequire } from "node:module";
-const { chromium } = createRequire(import.meta.url)("playwright");
+// Derive every install icon from the same transparent, reference-edited emblem.
+import sharp from "sharp";
+import { writeFile } from "node:fs/promises";
 
-const svg = readFileSync(new URL("../public/icons/icon.svg", import.meta.url), "utf8");
-// Full-bleed square (no rounded corners) — platforms apply their own mask.
-const square = svg.replace('rx="14"', 'rx="0"');
-// Maskable: emblem shrunk into the 80% safe zone.
-const maskable = square.replace('translate(9.6 8) scale(.7)', 'translate(14.4 13) scale(.55)');
-
+const root = new URL("../public/icons/", import.meta.url);
+const source = new URL("emblem.png", root);
+const background = "#0d3b58";
 const jobs = [
-  ["icon-192.png", 192, square],
-  ["icon-512.png", 512, square],
-  ["icon-maskable-512.png", 512, maskable],
-  ["apple-touch-icon.png", 180, square],
+  ["icon-192.png", 192, 0.84],
+  ["icon-512.png", 512, 0.84],
+  // A centered square of 56% fits entirely within the circular 80% safe zone.
+  ["icon-maskable-512.png", 512, 0.56],
+  ["apple-touch-icon.png", 180, 0.84],
+  ["favicon.png", 32, 0.90],
 ];
-
-const browser = await chromium.launch();
-const page = await browser.newPage();
-for (const [name, px, markup] of jobs) {
-  await page.setViewportSize({ width: px, height: px });
-  await page.setContent(`<style>*{margin:0}svg{display:block;width:${px}px;height:${px}px}</style>${markup}`);
-  await page.screenshot({ path: new URL(`../public/icons/${name}`, import.meta.url).pathname });
+for (const [name, size, fraction] of jobs) {
+  const side = Math.round(size * fraction);
+  const emblem = await sharp(source.pathname).resize(side, side).toBuffer();
+  await sharp({ create: { width: size, height: size, channels: 4, background } })
+    .composite([{ input: emblem, gravity: "centre" }])
+    .png().toFile(new URL(name, root).pathname);
 }
-await browser.close();
-console.log("icons written");
+// Self-contained SVG favicon wrapper preserves the sculpted raster material.
+const embedded = await sharp(source.pathname).resize(128, 128).png().toBuffer();
+await writeFile(new URL("icon.svg", root), `<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128"><rect width="128" height="128" fill="${background}"/><image x="6" y="6" width="116" height="116" href="data:image/png;base64,${embedded.toString("base64")}"/></svg>\n`);
+console.log("Generated ring-free PNG and SVG icons from emblem.png");
