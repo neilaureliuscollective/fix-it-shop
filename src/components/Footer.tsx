@@ -9,7 +9,7 @@ export function Footer() {
         <div>
           <Wordmark />
           <p className="mt-6 max-w-sm leading-relaxed text-mist">A good chair, a clean cut, and someone in your corner.</p>
-          <p className="eyebrow mt-6 !text-[0.6rem] text-gold">Veteran-Owned · Built in Eunice</p>
+          <p className="eyebrow mt-6 !text-[0.6rem] text-gold">Rooted in care · Built in Eunice</p>
         </div>
         <div>
           <p className="eyebrow text-stone">Visit</p>
@@ -32,7 +32,7 @@ export function Footer() {
           </ul>
         </div>
       </div>
-      <div className="mx-auto mt-14 flex max-w-7xl flex-col gap-2 border-t border-white/[0.06] px-5 pt-6 text-xs text-steel sm:flex-row sm:justify-between sm:px-8">
+      <div className="mx-auto mt-14 flex max-w-7xl flex-col gap-2 border-t border-white/[0.06] px-5 pt-6 text-xs text-mist sm:flex-row sm:justify-between sm:px-8">
         <span>© {new Date().getFullYear()} {site.name}. All rights reserved.</span>
         <span>Booking powered by GlossGenius.</span>
       </div>

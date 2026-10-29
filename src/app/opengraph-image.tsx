@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "The Fix-It Shop — Veteran-owned men's grooming in Eunice, Louisiana";
+export const alt = "The Fix-It Shop — Personal men's grooming in Eunice, Louisiana";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -31,7 +31,7 @@ export default function OpengraphImage() {
         </div>
         <div style={{ display: "flex", flexDirection: "column" }}>
           <div style={{ fontSize: 22, letterSpacing: 7, color: "#cfa557", textTransform: "uppercase" }}>
-            Veteran-Owned · Eunice, Louisiana
+            Rooted in care · Eunice, Louisiana
           </div>
           <div style={{ fontSize: 88, lineHeight: 1.05, marginTop: 24, fontFamily: "serif" }}>Come as you are. Leave standing taller.</div>
         </div>

@@ -1,12 +1,9 @@
-import { Aurora } from "@/components/Aurora";
 import { FinalCta } from "@/components/FinalCta";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { Proof } from "@/components/Proof";
 import { Hero } from "@/components/Hero";
-import { InstallPrompt } from "@/components/InstallPrompt";
-import { Pillars } from "@/components/Pillars";
 import { Policies } from "@/components/Policies";
-import { Ritual } from "@/components/Ritual";
 import { ServiceMenu } from "@/components/ServiceMenu";
 import { StickyBookBar } from "@/components/StickyBookBar";
 import { Story } from "@/components/Story";
@@ -21,21 +18,18 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema(siteUrl())).replace(/</g, "\\u003c") }}
       />
-      <Aurora />
       <Header />
       <main>
         <Hero />
-        <Pillars />
-        <Ritual />
         <Story />
         <ServiceMenu />
+        <Proof />
         <Visit />
         <Policies />
         <FinalCta />
       </main>
       <Footer />
       <StickyBookBar />
-      <InstallPrompt />
     </>
   );
 }

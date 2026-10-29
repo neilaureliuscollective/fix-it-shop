@@ -9,7 +9,7 @@ export const site = {
   stylist: "Katie",
   tagline: "More than a haircut.",
   description:
-    "Veteran-owned men's grooming in Eunice, Louisiana. Clean fades, shaped beards and hot towels from Katie, a Marine veteran who believes your hour in the chair should leave you feeling as good as you look.",
+    "Men’s grooming by Katie in Eunice, Louisiana. Careful cuts, shaped beards and a moment to reset. Rooted in care, family and a legacy worth building.",
   phone: { display: "(337) 945-9138", href: "tel:+13379459138" },
   address: {
     street: "230 W Walnut Ave",
@@ -84,10 +84,10 @@ export const hours: Hours[] = [
   { day: "Monday", short: "Mon", open: null, close: null, note: "Closed" },
   { day: "Tuesday", short: "Tue", open: "12:00", close: "18:00" },
   { day: "Wednesday", short: "Wed", open: "10:00", close: "18:00" },
-  { day: "Thursday", short: "Thu", open: null, close: null, note: "By appointment" },
-  { day: "Friday", short: "Fri", open: null, close: null, note: "By appointment" },
+  { day: "Thursday", short: "Thu", open: null, close: null, note: "Check booking" },
+  { day: "Friday", short: "Fri", open: null, close: null, note: "Check booking" },
   { day: "Saturday", short: "Sat", open: "09:00", close: "14:00" },
-  { day: "Sunday", short: "Sun", open: null, close: null, note: "Closed" },
+  { day: "Sunday", short: "Sun", open: null, close: null, note: "Check booking" },
 ];
 
 export const pillars = [

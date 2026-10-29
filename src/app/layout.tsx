@@ -1,24 +1,18 @@
 import type { Metadata, Viewport } from "next";
-import { Cormorant_Garamond, Manrope } from "next/font/google";
+import localFont from "next/font/local";
 import { Analytics } from "@vercel/analytics/next";
 import { site } from "@/content/site";
 import { siteUrl } from "@/lib/url";
 import "./globals.css";
 
-const cormorant = Cormorant_Garamond({
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  style: ["normal", "italic"],
-  variable: "--font-cormorant",
-  display: "swap",
-});
-
-const manrope = Manrope({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-manrope",
-  display: "swap",
-});
+const cormorant = localFont({ src: [
+  { path: "../../public/fonts/cormorant-garamond-latin-500-normal.woff2", weight: "500", style: "normal" },
+  { path: "../../public/fonts/cormorant-garamond-latin-500-italic.woff2", weight: "500", style: "italic" },
+], variable: "--font-cormorant", display: "swap" });
+const manrope = localFont({ src: [
+  { path: "../../public/fonts/manrope-latin-400-normal.woff2", weight: "400", style: "normal" },
+  { path: "../../public/fonts/manrope-latin-600-normal.woff2", weight: "600", style: "normal" },
+], variable: "--font-manrope", display: "swap" });
 
 const title = `${site.name} · Men's Grooming in Eunice, LA`;
 

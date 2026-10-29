@@ -70,7 +70,7 @@ export function ServiceMenu() {
     <section id="menu" className="relative py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeading
-          eyebrow="The Menu"
+          eyebrow="02 / Find your service"
           title={
             <>
               Four ways
