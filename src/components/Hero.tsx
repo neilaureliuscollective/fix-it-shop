@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { site } from "@/content/site";
 import { ArcEmblem } from "./ArcEmblem";
 import { BookButton } from "./BookButton";
@@ -19,7 +20,7 @@ export function Hero() {
         }}
       />
 
-      <div className="relative mx-auto grid w-full max-w-7xl items-center gap-12 px-5 pt-32 pb-24 sm:px-8 lg:grid-cols-[1.25fr_0.75fr] lg:pb-28">
+      <div className="relative mx-auto grid w-full max-w-7xl items-center gap-12 px-5 pt-32 pb-24 sm:px-8 lg:grid-cols-[1.08fr_0.92fr] lg:pb-28">
         <div>
           <ArcEmblem className="mb-8 w-24 lg:hidden" />
 
@@ -36,8 +37,8 @@ export function Hero() {
           </h1>
 
           <p className="mt-7 max-w-xl text-lg leading-relaxed text-mist sm:text-xl">
-            A men&apos;s chair in Eunice where the haircut is only part of it. Sit down, breathe out, and let{" "}
-            {site.stylist} take care of the rest.
+            A men&apos;s chair in Eunice for looking sharp, carrying yourself with confidence, and showing up for what
+            matters. {site.stylist} takes care of the cut. You carry the rest forward.
           </p>
 
           <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
@@ -52,9 +53,9 @@ export function Hero() {
 
           <dl className="mt-14 grid max-w-2xl grid-cols-3 gap-3 sm:gap-4">
             {[
-              ["USMC", "Veteran-owned"],
-              ["Men's", "Grooming only"],
-              ["Eunice", "Built from scratch"],
+              ["Your hour", "Taken seriously"],
+              ["Eunice", "Built for home"],
+              ["Legacy", "Starts with you"],
             ].map(([k, v]) => (
               <Glass key={k} className="rounded-2xl px-4 py-4 sm:px-5 sm:py-5">
                 <dt className="font-display text-2xl text-gold-bright sm:text-3xl">{k}</dt>
@@ -64,7 +65,23 @@ export function Hero() {
           </dl>
         </div>
 
-        <ArcEmblem className="hidden w-full max-w-[460px] justify-self-end lg:block" />
+        <div className="relative mx-auto w-full max-w-xl lg:justify-self-end">
+          <div className="glass-gold relative aspect-[4/5] overflow-hidden rounded-[2rem] shadow-[0_40px_100px_-35px_rgb(0_0_0/0.9)] lg:aspect-[4/5]">
+            <Image
+              src="/images/legacy-hero.webp"
+              alt="A father and son sharing a quiet moment at the barbershop mirror"
+              fill
+              priority
+              sizes="(min-width: 1024px) 42vw, 90vw"
+              className="object-cover object-[62%_center]"
+            />
+            <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-carbon/85 via-transparent to-transparent" />
+            <div className="absolute right-5 bottom-5 left-5 flex items-end justify-between gap-5 rounded-2xl border border-white/10 bg-carbon/55 p-5 backdrop-blur-xl">
+              <p className="max-w-[14rem] font-display text-2xl leading-tight italic text-stone">What you build in yourself travels home with you.</p>
+              <ArcEmblem className="w-16 shrink-0" />
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

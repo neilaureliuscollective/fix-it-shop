@@ -10,29 +10,30 @@ export function Story() {
       <div className="relative mx-auto grid max-w-7xl gap-16 px-5 sm:px-8 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
         <div>
           <SectionHeading
-            eyebrow="Meet Katie"
+            eyebrow="The Name Behind the Chair"
             title={
               <>
-                A Marine who never
+                A name passed down.
                 <br />
-                <span className="text-gold-foil italic">stopped showing up.</span>
+                <span className="text-gold-foil italic">A purpose carried forward.</span>
               </>
             }
           />
           <Reveal className="mt-8 space-y-5 text-lg leading-relaxed text-mist">
             <p>
-              Katie served in the United States Marine Corps. What stayed with her wasn&apos;t the toughness.
-              It was learning to look out for the person next to you.
+              The Fix-It Shop began with a story already woven into Katie&apos;s family: the children&apos;s book
+              <em> Mr. Bell&apos;s Fixit Shop</em>, about a neighborhood craftsman known for mending what people brought
+              through his door. The name carries that family history into something she is building for the next
+              generation.
             </p>
             <p>
-              She brought that home and built The Fix-It Shop from the ground up, right here in Eunice, one chair and
-              one client at a time. She chose to work with men because she&apos;s seen what a good cut and an honest
-              conversation can do for someone who&apos;s been carrying too much.
+              Here, “fix it” means more than a fresh cut. It is the moment a man recognizes himself again, carries a
+              little more confidence, and walks out ready to be better for himself, his family and his community.
             </p>
             <p>
-              She&apos;ll make sure you look sharp. Beyond that, she wants to see you win: at work, at home, and in
-              the legacy you&apos;re building for the people who count on you. In the chair or out of it, if she can
-              help, she will.
+              Katie built that purpose into one chair in Eunice. Her time in the Marine Corps is one chapter of her
+              story; service still matters, but the legacy she is building now is rooted in family and in helping
+              every man who sits down become more of who he wants to be.
             </p>
             <p className="text-stone">
               The name says Fix-It. It was never about fixing you. It&apos;s about helping you get back to you.
@@ -46,11 +47,11 @@ export function Story() {
             <div className="flex h-full flex-col items-center justify-center text-center">
               <ArcEmblem className="w-40" />
               <p className="text-chrome mt-8 font-display text-3xl leading-tight italic sm:text-4xl">
-                You&apos;re not broken.
+                Legacy isn&apos;t left.
                 <br />
-                You&apos;re just due.
+                It&apos;s lived.
               </p>
-              <figcaption className="eyebrow mt-8 text-gold">The Fix-It Shop · Est. Eunice</figcaption>
+              <figcaption className="eyebrow mt-8 text-gold">Family · Craft · Community</figcaption>
             </div>
           </Glass>
         </Reveal>

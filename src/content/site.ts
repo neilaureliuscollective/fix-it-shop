@@ -9,7 +9,7 @@ export const site = {
   stylist: "Katie",
   tagline: "More than a haircut.",
   description:
-    "Veteran-owned men's grooming in Eunice, Louisiana. Clean fades, shaped beards and hot towels from Katie, a Marine veteran who believes your hour in the chair should leave you feeling as good as you look.",
+    "Men's grooming in Eunice, Louisiana, built around family, confidence and the legacy you carry forward. Clean fades, shaped beards and a chair where Katie helps every client leave standing taller.",
   phone: { display: "(337) 945-9138", href: "tel:+13379459138" },
   address: {
     street: "230 W Walnut Ave",
@@ -103,8 +103,8 @@ export const pillars = [
   },
   {
     n: "03",
-    title: "Someone in your corner",
-    body: "Katie is in this to help men move forward, in the chair and out of it. If she can help, she will.",
+    title: "A legacy carried forward",
+    body: "You leave ready to show up for the people who count on you. Because how you carry yourself reaches far beyond the chair.",
   },
 ];
 
