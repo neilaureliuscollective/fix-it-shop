@@ -38,7 +38,8 @@ export function Visit() {
             <p className="eyebrow text-gold">Hours</p>
             <HoursList />
             <p className="mt-6 text-sm leading-relaxed text-mist">
-              Appointments only. Live availability is always on the booking page.
+              Walk-ins are welcome Tuesday through Friday. Saturday is appointment only. Live availability is always
+              on the booking page.
             </p>
           </Glass>
         </Reveal>

@@ -1,6 +1,6 @@
 # The Fix-It Shop
 
-Front-of-house web app for The Fix-It Shop — veteran-owned men's grooming by Katie in Eunice, Louisiana.
+Front-of-house web app for The Fix-It Shop — men's grooming by Katie in Eunice, Louisiana.
 Installable on any phone ("Add to Home Screen"). All booking goes to GlossGenius; nothing is booked here.
 
 ## Edit content
