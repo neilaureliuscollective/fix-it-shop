@@ -68,8 +68,8 @@ export function Hero() {
         <div className="relative mx-auto w-full max-w-xl lg:justify-self-end">
           <div className="glass-gold relative aspect-[4/5] overflow-hidden rounded-[2rem] shadow-[0_40px_100px_-35px_rgb(0_0_0/0.9)] lg:aspect-[4/5]">
             <Image
-              src="/images/confident-beard-hero.webp"
-              alt="A man with a fresh haircut and a thick, precisely shaped full beard standing with quiet confidence"
+              src="/images/confident-beard-hero-v2.webp"
+              alt="A white man with a full head of freshly styled hair and a carefully shaped full beard"
               fill
               priority
               sizes="(min-width: 1024px) 42vw, 90vw"
