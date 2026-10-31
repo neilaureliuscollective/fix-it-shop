@@ -68,16 +68,16 @@ export function Hero() {
         <div className="relative mx-auto w-full max-w-xl lg:justify-self-end">
           <div className="glass-gold relative aspect-[4/5] overflow-hidden rounded-[2rem] shadow-[0_40px_100px_-35px_rgb(0_0_0/0.9)] lg:aspect-[4/5]">
             <Image
-              src="/images/legacy-hero.webp"
-              alt="A father and son sharing a quiet moment at the barbershop mirror"
+              src="/images/cinematic-mens-grooming.webp"
+              alt="A cosmetologist finishing a men's haircut with clippers and a comb"
               fill
               priority
               sizes="(min-width: 1024px) 42vw, 90vw"
-              className="object-cover object-[62%_center]"
+              className="object-cover object-[40%_center]"
             />
             <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-carbon/85 via-transparent to-transparent" />
             <div className="absolute right-5 bottom-5 left-5 flex items-end justify-between gap-5 rounded-2xl border border-white/10 bg-carbon/55 p-5 backdrop-blur-xl">
-              <p className="max-w-[14rem] font-display text-2xl leading-tight italic text-stone">What you build in yourself travels home with you.</p>
+              <p className="max-w-[14rem] font-display text-2xl leading-tight italic text-stone">Clean work. Careful detail. A chair where you can breathe out.</p>
               <ArcEmblem className="w-16 shrink-0" />
             </div>
           </div>

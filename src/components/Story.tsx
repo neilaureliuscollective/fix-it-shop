@@ -31,9 +31,8 @@ export function Story() {
               little more confidence, and walks out ready to be better for himself, his family and his community.
             </p>
             <p>
-              Katie built that purpose into one chair in Eunice. Her time in the Marine Corps is one chapter of her
-              story; service still matters, but the legacy she is building now is rooted in family and in helping
-              every man who sits down become more of who he wants to be.
+              Katie built that purpose into one chair in Eunice. The legacy she is building is rooted in family, in
+              careful work, and in helping every man who sits down become more of who he wants to be.
             </p>
             <p className="text-stone">
               The name says Fix-It. It was never about fixing you. It&apos;s about helping you get back to you.

@@ -29,7 +29,10 @@ export function HoursList() {
               <span className="font-medium">{h.day}</span>
               {isToday && <span className="eyebrow !text-[0.55rem] text-gold">Today</span>}
             </span>
-            <span className="tabular-nums">{h.open && h.close ? `${fmt(h.open)} – ${fmt(h.close)}` : h.note}</span>
+            <span className="text-right tabular-nums">
+              {h.open && h.close ? `${fmt(h.open)} – ${fmt(h.close)}` : h.note}
+              {h.open && h.close && h.note && <span className="block text-xs text-gold">{h.note}</span>}
+            </span>
           </li>
         );
       })}

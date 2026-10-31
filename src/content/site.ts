@@ -84,9 +84,9 @@ export const hours: Hours[] = [
   { day: "Monday", short: "Mon", open: null, close: null, note: "Closed" },
   { day: "Tuesday", short: "Tue", open: "12:00", close: "18:00" },
   { day: "Wednesday", short: "Wed", open: "10:00", close: "18:00" },
-  { day: "Thursday", short: "Thu", open: null, close: null, note: "By appointment" },
-  { day: "Friday", short: "Fri", open: null, close: null, note: "By appointment" },
-  { day: "Saturday", short: "Sat", open: "09:00", close: "14:00" },
+  { day: "Thursday", short: "Thu", open: null, close: null, note: "Call for hours" },
+  { day: "Friday", short: "Fri", open: null, close: null, note: "Call for hours" },
+  { day: "Saturday", short: "Sat", open: "09:00", close: "14:00", note: "Appointment only" },
   { day: "Sunday", short: "Sun", open: null, close: null, note: "Closed" },
 ];
 
