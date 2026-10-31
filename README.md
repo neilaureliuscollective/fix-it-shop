@@ -5,7 +5,7 @@ Installable on any phone ("Add to Home Screen"). All booking goes to GlossGenius
 
 ## Edit content
 Everything Katie might change lives in **`src/content/site.ts`**: booking URL, services and prices, hours, policies, copy.
-Open `TODO`s in that file mark details still to confirm (Edge+ price/duration, Thu/Fri/Sun hours).
+Open `TODO`s in that file mark details still to confirm (Edge+ price/duration).
 
 ## Develop
 ```bash

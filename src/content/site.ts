@@ -79,13 +79,12 @@ export const services: Service[] = [
 
 export type Hours = { day: string; short: string; open: string | null; close: string | null; note?: string };
 
-// TODO: confirm Thursday, Friday and Sunday with Katie.
 export const hours: Hours[] = [
   { day: "Monday", short: "Mon", open: null, close: null, note: "Closed" },
   { day: "Tuesday", short: "Tue", open: "12:00", close: "18:00" },
   { day: "Wednesday", short: "Wed", open: "10:00", close: "18:00" },
-  { day: "Thursday", short: "Thu", open: null, close: null, note: "Call for hours" },
-  { day: "Friday", short: "Fri", open: null, close: null, note: "Call for hours" },
+  { day: "Thursday", short: "Thu", open: "10:00", close: "18:00" },
+  { day: "Friday", short: "Fri", open: "10:00", close: "18:00" },
   { day: "Saturday", short: "Sat", open: "09:00", close: "14:00", note: "Appointment only" },
   { day: "Sunday", short: "Sun", open: null, close: null, note: "Closed" },
 ];
