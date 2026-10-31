@@ -79,7 +79,6 @@ export const services: Service[] = [
 
 export type Hours = { day: string; short: string; open: string | null; close: string | null; note?: string };
 
-// TODO: confirm Sunday with Katie.
 export const hours: Hours[] = [
   { day: "Monday", short: "Mon", open: null, close: null, note: "Closed" },
   { day: "Tuesday", short: "Tue", open: "12:00", close: "18:00" },
