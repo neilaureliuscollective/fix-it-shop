@@ -68,12 +68,12 @@ export function Hero() {
         <div className="relative mx-auto w-full max-w-xl lg:justify-self-end">
           <div className="glass-gold relative aspect-[4/5] overflow-hidden rounded-[2rem] shadow-[0_40px_100px_-35px_rgb(0_0_0/0.9)] lg:aspect-[4/5]">
             <Image
-              src="/images/cinematic-mens-grooming.webp"
-              alt="A cosmetologist finishing a men's haircut with clippers and a comb"
+              src="/images/confident-beard-hero-v2.webp"
+              alt="A white man with a full head of freshly styled hair and a carefully shaped full beard"
               fill
               priority
               sizes="(min-width: 1024px) 42vw, 90vw"
-              className="object-cover object-[40%_center]"
+              className="object-cover object-[48%_center]"
             />
             <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-carbon/85 via-transparent to-transparent" />
             <div className="absolute right-5 bottom-5 left-5 flex items-end justify-between gap-5 rounded-2xl border border-white/10 bg-carbon/55 p-5 backdrop-blur-xl">
